@@ -1,0 +1,12 @@
+<h1>Componente 2</h1>
+<p>Me llamo {{nombre}} y tengo {{edad}} años.</p>
+<input type="checkbox" [checked]="confirmar"/>     <!--Con el [checked]... lo que hago es enlazar el ts con el html, y se me ejecutará con el valor que le he indicado en el ts, en este caso false-->
+<button (click)="cambiar()">Cambiar valor del checkbox</button>   <!--Al pulsar el boton el checkbox cambiará de valor, que es lo que he indicado que tiene que hacer el método cambiar en el ts-->
+
+<div>
+<p>Vivo en {{lugar}} y tengo un coche de color {{colorCoche}}.</p>
+<input type="checkbox" [checked]="clickear"/>
+<button (click)="pulsar()">Cambiar el valor del checkbox</button>
+</div>
+
+{{mostrarTexto()}}

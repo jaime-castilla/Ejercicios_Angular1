@@ -1,0 +1,33 @@
+<h1>Componente 4</h1>
+<h2>Formulario de contacto</h2>
+<p>
+    <label for="usuario">Usuario:  </label>
+    <input type="text" placeholder="Usuario" [(ngModel)]="usuario"/>
+</p>
+<p>
+    <label for="password">Contraseña:  </label>
+    <input type="password" placeholder="Contraseña" maxlength="8" [(ngModel)]="password"/>
+</p>
+<p>
+    <label for="genero">Genero:  </label>
+    <input type="radio" name="genero" value="masculino" [(ngModel)]="genero"/>Hombre     <!--Para que solo se pueda elegir una opción de todas las que hay, hay que poner el atributo name a todos los input que tenemos como opción, y darle el mismo valor a todos. Y en el atributo value, ponerle a cada opción un valor.-->
+    <input type="radio" name="genero" value="femenino" [(ngModel)]="genero"/>Mujer
+</p>
+<p>
+    <label for="lenguajes">Lenguajes que programa:  </label>
+    <input type="checkbox" name="html" value="HTML" [(ngModel)]="html"/>HTML
+    <input type="checkbox" name="java" value="Java" [(ngModel)]="java"/>Java
+    <input type="checkbox" name="sql" value="SQL" [(ngModel)]="sql"/>SQL
+</p>
+<p>
+    <label for="comunidad">Comunidad en la que realizó sus estudios:  </label>
+    <select name="comunidad" [(ngModel)]="comunidad">
+        <option value="Avila">Avila</option>
+        <option value="Barcelona">Barcelona</option>
+        <option value="Madrid">Madrid</option>
+        <option value="Valencia">Valencia</option>
+    </select>
+</p>
+<button (click)="mostrarDatos()">Enviar datos</button>
+<h3>Mensaje:</h3>
+{{datos}}
