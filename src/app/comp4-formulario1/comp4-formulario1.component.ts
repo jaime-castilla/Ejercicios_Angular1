@@ -26,5 +26,4 @@ export class Comp4Formulario1Component {
     this.datos=`Usuario: ${this.usuario} //Contraseña: ${this.password} //Genero: ${this.genero} //Lenguajes: ${this.html} ${this.java} ${this.sql} //Comunidad: ${this.comunidad}`
   }
 
-
 }

@@ -1,3 +1,40 @@
 <h1>Componente 5</h1>
 <h2>Formulario: Datos de compra</h2>
+<p>
+    <label for="email">Correo electrónico:  </label>
+    <input type="text" size="25" placeholder="Escriba su correo electrónico" [(ngModel)]="correo"/>
+</p>
+<p>
+    <label for="direccion">Dirección:  </label>
+    <input type="text" size="30" placeholder="Escriba su dirección" [(ngModel)]="direccion"/>
+</p>
+<p>
+    <label for="telef">Teléfono:  </label>
+    <input type="text" size="20" placeholder="Escriba su teléfono" [(ngModel)]="telefono"/>
+</p>
+<p>
+    <label for="comuni">Comunidad:  </label>
+    <select name="comunidad" [(ngModel)]="comunidad">
+        <option value="Avila">Ávila</option>
+        <option value="Barcelona">Barcelona</option>
+        <option value="Madrid">Madrid</option>
+        <option value="Valencia">Valencia</option>
+    </select>
+</p>
+<p>
+    <label for="pago">Forma de pago:  </label>
+    <input type="radio" name="pago" value="Efectivo" [(ngModel)]="formaPago"/>Efectivo
+    <input type="radio" name="pago" value="Tarjeta" [(ngModel)]="formaPago"/>Tarjeta
+    <input type="radio" name="pago" value="Contra-reembolso" [(ngModel)]="formaPago"/>Contra-reembolso 
+</p>
+<p>
+    <label for="comentarios">Comentarios:  </label>
+    <textarea name="cuadroText" cols="30" rows="5" placeholder="Escriba sus comentarios..." [(ngModel)]="comentarios"></textarea>
+</p>
+<p>
+    <input type="checkbox" name="aceptacion" [(ngModel)]="acepta"/>Acepta recibir información de nuestros productos
+</p>
+<button (click)="enviarDatos()">Enviar datos</button>
+<h3>Mensaje:</h3>
+{{datos}}
 
